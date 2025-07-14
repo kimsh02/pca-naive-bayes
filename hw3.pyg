@@ -1,0 +1,13 @@
+# 3e
+
+lr2 = LinearRegression()
+lr2.fit(monona_df_train[['ones', 'Winter']],mendota_df_train[[col]])
+mendota_pred2 = lr2.predict(monona_df_test[['ones', 'Winter']])
+mse2 = mean_squared_error(mendota_df_test[[col]], mendota_pred2)
+
+weights2 = lr2.coef_
+intercept2 = lr2.intercept_
+
+print('Feature weights: ' + str(weights2))
+print('Intercept:' + str(intercept2))
+print('Mean sqaure error: ' + str(mse2))
